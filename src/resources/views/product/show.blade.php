@@ -38,6 +38,14 @@
                     id="preview"
                     alt="商品画像"
                     class="product-show__image u-w-100">
+                @else
+                {{-- エラー時は空の preview を出しておく（エラー後も JS の preview が使えるように） --}}
+                <img
+                    id="preview"
+                    src=""
+                    alt="商品画像"
+                    class="product-show__image u-w-100"
+                    style="display:none;">
                 @endif
 
                 <div class="input-file">
@@ -112,8 +120,8 @@
                             id="season-{{ $season->id }}"
                             value="{{ $season->id }}"
                             class="input-checkbox u-cursor-pointer"
-                            {{ in_array($season->id, old('season', $product->seasons
-                            ->pluck('id')->toArray())) ? 'checked' : '' }}>
+                            {{ in_array($season->id, old('season', $product->
+                            seasons->pluck('id')->toArray())) ? 'checked' : '' }}>
 
                         {{ $season->name }}
                     </label>

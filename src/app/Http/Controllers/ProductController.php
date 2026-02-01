@@ -68,9 +68,12 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, $id)
     {
-        $product = Product::findOrFail($id);
+        $product = Product::with('seasons')->findOrFail($id);
 
         // 画像更新
+        if ($request->hasFile('image')) { $path = $request->file('image')
+            ->store('products', 'public'); $product->image = $path; };
+
         $product->name        = $request->name;
         $product->price       = $request->price;
         $product->description = $request->description;
