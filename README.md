@@ -139,8 +139,8 @@ Windows 環境では 8.0.26 でも動作しますが、環境差によるトラ�
 /products/register            商品登録フォーム（GET）
 /products/register            商品登録処理（POST）
 /products/{id}/update         商品更新フォーム（GET）
-/products/{id}/update         商品更新処理（POST または PUT）
-/products/{id}/delete         商品削除（POST または DELETE）
+/products/{id}/update         商品更新処理（PUT）
+/products/{id}/delete         商品削除（DELETE）
 ```
 
 ---
