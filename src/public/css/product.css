@@ -366,7 +366,7 @@
         margin-bottom: 20px;
     }
 
-    /* グリッドを1列 or 2列に */
+    /* グリッドを1列 */
     .product__grid {
         flex-direction: column;
     }
