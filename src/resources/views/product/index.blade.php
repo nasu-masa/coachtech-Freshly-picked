@@ -9,12 +9,16 @@
 <div class="product u-w-100">
 
     <div class="product__heading u-flex-between">
-        <h2 class="product__title u-inline-block">
-            @if (request('search'))
-            "{{ request('search') }}"
-            @endif
-            商品一覧
-        </h2>
+        <div>
+            <h2 class="product__title u-inline-block">
+                @if (request('search'))
+                "{{ request('search') }}"
+                @endif
+            </h2>
+            <h2 class="product__title u-inline-block">
+                商品一覧
+            </h2>
+        </div>
 
         <a href="{{ route('products.create') }}"
             class="product__add-button

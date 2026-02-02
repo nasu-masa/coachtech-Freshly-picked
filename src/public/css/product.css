@@ -2,6 +2,8 @@
     Product Page
 ======================================== */
 
+
+
 /* ---------- Base ---------- */
 
 .product__title {
@@ -17,6 +19,7 @@
     background-color: #ffa929;
     border-radius: 5px;
     color: black;
+    text-align: center;
 }
 
 .product__controls {
@@ -141,7 +144,6 @@
     color: #fff;
     pointer-events: none;
 }
-
 
 /* ========================================
     Show Page
@@ -318,7 +320,6 @@
         url('/icon/red.trash.icon.png') no-repeat center / 70px;
 }
 
-
 /* ========================================
     Create Page
 ======================================== */
@@ -338,4 +339,98 @@
     max-width: 310px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+}
+
+@media (max-width: 1250px) {
+
+    .product__heading,
+    .product__controls,
+    .product__grid{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .product__row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 全体の横幅調整（コントロール部分を縦並びに） */
+    .product__controls {
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    /* グリッドを1列 or 2列に */
+    .product__grid {
+        flex-direction: column;
+    }
+
+    .product__card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* 全幅に */
+    .product__search-input,
+    .product__search-button,
+    .product__sort-select {
+        width: 100%;
+    }
+
+    .product__pagination {
+        justify-content: center;
+    }
+
+    .product-show__container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-show__file,
+    .product-show__content {
+        width: 100%;
+    }
+
+    .product-show__content {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .product__heading {
+        flex-direction: column;
+    }
+
+    .product-show,
+    .product-create {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .product-show__season,
+    .product-create__season {
+        margin-right: 20px;
+    }
+
+    .delete-form__button {
+        transform: translateY(0px);
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .product__pagination-link {
+        margin-top: 20px;
+        width: 1.5em;
+        height: 1.5em;
+    }
 }

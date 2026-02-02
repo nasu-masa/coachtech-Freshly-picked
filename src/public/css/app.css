@@ -28,3 +28,10 @@
     margin: 70px auto;
     padding: 0 30px;
 }
+
+@media (max-width: 768px) {
+
+    .product__main {
+        padding: 0 10px;
+    }
+}
